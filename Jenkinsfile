@@ -27,7 +27,8 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh "cp -i **/target/*.war /var/lib/tomcat7/webapps"
+						sh "sudo su"
+                        sh "cp -i **/target/*.war /home/ec2-user/apache-tomcat-8.5.40/webapps"
                     }
                 }
                 }
