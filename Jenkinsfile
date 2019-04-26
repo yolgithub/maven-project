@@ -28,7 +28,7 @@ stages{
                 stage ('Deploy to Staging'){
                     steps {
 					
-                        sh "cp -i /home/ec2-user/Jenkins_key_pair.pem **/target/*.war ec2-user@${params.tomcat_dev}:/home/ec2-user/apache-tomcat-8.5.40/webapps"
+                        sh "cp -i /home/ec2-user/Jenkins_key_pair.pem **/target/*.war /home/ec2-user/apache-tomcat-8.5.40/webapps"
                     }
                 }
                 }
